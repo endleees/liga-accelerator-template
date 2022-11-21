@@ -1,5 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import footerMobile from './modules/footer-mobile/footer-mobile';
+import readMore from './modules/readmore/read-more';
+import setphoneMask from './modules/phone-mask/phone-mask';
 
 // ---------------------------------
 
@@ -7,9 +10,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-
+  footerMobile();
+  readMore();
   iosVhFix();
-
   // Modules
   // ---------------------------------
 
@@ -17,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    setphoneMask();
   });
 });
 

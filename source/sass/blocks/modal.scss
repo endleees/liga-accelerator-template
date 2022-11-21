@@ -15,7 +15,6 @@
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity $trans-modal,
     transform $trans-modal,
     visibility $trans-modal;
@@ -40,6 +39,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
+
     @include vp-767 {
       padding: 60px 16px;
     }
@@ -62,7 +62,9 @@
     width: 600px;
     padding: 40px;
 
-    background-color: $color-default-white;
+    background-color: $color-deep-sky-blue;
+    color: $color-default-white;
+
 
     @include vp-767 {
       width: 100%;
@@ -83,6 +85,97 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+  }
+  &__close-btn-icon {
+    fill: $color-default-white;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140.62%;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $ff-pt-mono;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  &__input {
+    background: rgba(4, 20, 39, 0.15);
+    border-radius: 3px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $ff-pt-mono;
+    color: $color-default-white;
+    width: 275px;
+    height: 50px;
+    padding-left: 15px;
+    z-index: 5;
+    width: 100%;
+    margin-bottom: 20px;
+    &-textarea {
+      height: 155px;
+      padding-top: 10px;
+      &::placeholder {
+        padding-top: 15px;
+      }
+    }
+  }
+  &__input::placeholder {
+    color: $color-default-white;
+  }
+  &__label {
+    position: relative;
+  }
+  &__submit {
+    border-radius: 3px;
+    background-color: $color-black-pearl;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-default-white;
+    padding: 10px 65px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  &__checkbox-description {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $ff-pt-mono;
+    color: $color-default-white;
+    display: inline-block;
+    margin-top: 20px;
+    left: 27px;
+    &::before {
+      width: 14.94px;
+      height: 15px;
+      position: absolute;
+      content: '';
+      border: 1px solid $color-default-white;
+      border-radius: 2px;
+      left: -25px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__checkbox {
+    top: 14px;
+    left: 10px;
+  }
+  &__checkbox:checked + &__checkbox-description::before {
+    background-image: url('../img/svg/sign.svg');
   }
 
   &--responsive {
