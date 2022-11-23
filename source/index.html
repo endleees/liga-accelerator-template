@@ -7,8 +7,12 @@
     <meta name="description" content="Описание проекта">
     <title>SmartDevice</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/pt-mono-regular.woff" as="font" crossorigin="">
+    <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.ttf" as="font" crossorigin="">
+    <link rel="preload" href="fonts/RobotoCondensed-Regular.ttf" as="font" crossorigin="">
   </head>
-  <body class="page__body">
+  <body>
     <div class="wrapper">
       <header class="header">
         <div class="header-container">
@@ -51,6 +55,10 @@
         <div class="main-container">
           <section class="main-info">
             <picture>
+              <source media="(max-width: 767px)" srcset="./img/background-info-mobile.webp">
+              <source media="(max-width: 1023px)" srcset="./img/background-info-tablet.webp">
+              <source media="(min-width: 1024px)" srcset="./img/background-info.webp">
+
               <source media="(max-width: 767px)" srcset="./img/background-info-mobile.jpg">
               <source media="(max-width: 1023px)" srcset="./img/background-info-tablet.jpg">
               <img class="main-info__background" src="./img/background-info.jpg" width="1920" height="880" alt="Материнская плата.">
@@ -118,7 +126,7 @@
               </li>
             </ul>
             <div class="main-advantage__about-us">
-              <img class="main-advantage__about-us-image" src="./img/2022.png" alt="2022.">
+              <img class="main-advantage__about-us-image" src="./img/2022.png" srcset="./img/2022.webp" width="150" height="320" alt="2022.">
               <div class="main-advantage__about-us-wrapper">
                 <h2 class="main-advantage__about-us-title">
                   О компании
@@ -156,6 +164,10 @@
               <ul class="main-offers__list">
                 <li class="main-offers__item">
                   <picture>
+                    <source media="(max-width: 767px)" srcset="./img/offer/background-mobile-1.webp">
+                    <source media="(max-width: 1023px)" srcset="./img/offer/background-tablet-1.webp">
+                    <source media="(min-width: 1024px)" srcset="./img/offer/background-1.webp">
+
                     <source media="(max-width: 767px)" srcset="./img/offer/background-mobile-1.jpg">
                     <source media="(max-width: 1023px)" srcset="./img/offer/background-tablet-1.jpg">
                     <img class="main-offers__background" src="./img/offer/background-1.jpg" width="350" height="650" alt="Задний фон.">
@@ -167,6 +179,10 @@
                 </li>
                 <li class="main-offers__item">
                   <picture>
+                    <source media="(max-width: 767px)" srcset="./img/offer/background-mobile-2.webp">
+                    <source media="(max-width: 1023px)" srcset="./img/offer/background-tablet-2.webp">
+                    <source media="(min-width: 1024px)" srcset="./img/offer/background-2.webp">
+
                     <source media="(max-width: 767px)" srcset="./img/offer/background-mobile-2.jpg">
                     <source media="(max-width: 1023px)" srcset="./img/offer/background-tablet-2.jpg">
                     <img class="main-offers__background" src="./img/offer/background-2.jpg" width="350" height="650" alt="Задний фон.">
@@ -178,6 +194,10 @@
                 </li>
                 <li class="main-offers__item">
                   <picture>
+                    <source media="(max-width: 767px)" srcset="./img/offer/background-mobile-2.webp">
+                    <source media="(max-width: 1023px)" srcset="./img/offer/background-tablet-2.webp">
+                    <source media="(min-width: 1024px)" srcset="./img/offer/background-2.webp">
+
                     <source media="(max-width: 767px)" srcset="./img/offer/background-mobile-3.jpg">
                     <source media="(max-width: 1023px)" srcset="./img/offer/background-tablet-3.jpg">
                     <img class="main-offers__background" src="./img/offer/background-3.jpg" width="350" height="650" alt="Задний фон.">
@@ -193,7 +213,7 @@
           <section class="main-feedback" id="consult">
             <div class="main-feedback__wrapper">
               <div>
-                <img class="main-feedback__image" width="510" height="285" src="./img/paper-airplane.png" alt="Бумажный самолет.">
+                  <img class="main-feedback__image" width="510" height="285" src="./img/paper-airplane.png" srcset="./img/paper-airplane.webp" alt="Бумажный самолет.">
               </div>
               <div class="main-feedback__content-wrapper">
                 <div class="main-feedback__title-wrapper">

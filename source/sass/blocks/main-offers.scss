@@ -1,117 +1,119 @@
 .main-offers {
   background-color: $color-black-pearl;
   min-height: 960px;
-
-}
-.main-offers__wrapper {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 63.5%;
-
-}
-.main-offers__list {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 5%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  margin: 0 auto;
-  height: 100%;
-}
-.main-offers__item {
-  position: relative;
-
-  height: 650px;
-}
-.main-offers__background {
-  position: absolute;
-}
-.main-offers__title {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  font-family: $ff-default;
-  color: $color-default-white;
-  margin: 0;
-  padding-top: 70px;
-  padding-bottom: 50px;
-}
-.main-offers__title-item {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: $color-default-white;
-  position: absolute;
-  margin: 0;
-  margin: 50px 0 0 40px;
-}
-.main-offers__button {
-  background: #00B2FF;
-  border: none;
-  border-radius: 3px 0px 0px 0px;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  color: $color-default-white;
-  right: 0;
-  bottom: 0;
-  cursor: pointer;
-}
-@include vp-1023 {
-  .main-offers {
-
-    min-height: 1080px;
-
-  }
-  .main-offers__wrapper {
-    width: 80%;
-  }
-  .main-offers__list {
-    grid-template-columns: repeat(1,1fr);
-
-    gap: 30px;
-  }
-  .main-offers__item {
-    width: 670px;
-    height: 250px;
-    margin: 0 auto;
-  }
-  .main-offers__background {
-    width: 670px;
-    height: 250px;
-  }
-}
-@include vp-767 {
-  .main-offers__item {
-    width: 270px;
-    height: 250px;
-  }
-  .main-offers__title {
+  & div {
     position: relative;
-    visibility: hidden;
-    padding: 0;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 140.62%;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    &::before {
-      content: 'Товары и услуги Smart Device';
-      position: absolute;
-      width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 63.5%;
+    &> h2 {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 51px;
       font-family: $ff-default;
       color: $color-default-white;
-      font-weight: 400;
-      font-size: 28px;
-      line-height: 140.62%;
-      visibility: visible;
+      margin: 0;
+      padding-top: 70px;
+      padding-bottom: 50px;
+    }
+    &>ul {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 5%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
     }
   }
-  .main-offers__title-item {
-    margin-top: 30px;
-    margin-left: 30px;
+  &__item {
+    position: relative;
+    height: 650px;
+    &> picture {
+      position: absolute;
+    }
+    &> button {
+      background: #00B2FF;
+      border: none;
+      border-radius: 3px 0px 0px 0px;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      color: $color-default-white;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+    &> h3 {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: $color-default-white;
+      position: absolute;
+      margin: 0;
+      margin: 50px 0 0 40px;
+    }
+  }
+}
+
+
+@include vp-1023 {
+
+  .main-offers {
+    min-height: 1080px;
+    &div {
+      width: 80%;
+      &>ul {
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+      }
+    }
+    &__item {
+      width: 670px;
+      height: 250px;
+      margin: 0 auto;
+      &> picture {
+        width: 670px;
+        height: 250px;
+      }
+    }
+  }
+
+}
+@include vp-767 {
+  .main-offers {
+    &div {
+      &>h2 {
+        position: relative;
+        visibility: hidden;
+        padding: 0;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 140.62%;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        &::before {
+          content: 'Товары и услуги Smart Device';
+          position: absolute;
+          width: 100%;
+          font-family: $ff-default;
+          color: $color-default-white;
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 140.62%;
+          visibility: visible;
+        }
+      }
+    }
+    &__item {
+      width: 270px;
+      height: 250px;
+      &> h3 {
+        margin-top: 30px;
+        margin-left: 30px;
+      }
+    }
   }
 }
